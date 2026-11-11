@@ -1,0 +1,1 @@
+An advanced GenAI agent built with multi-source tool augmentation—incorporating Wikipedia, custom web search, and arXiv APIs—to provide deep, accurate, and up-to-date knowledge synthesis across technical and general domains

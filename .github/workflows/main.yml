@@ -15,4 +15,15 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://Lee-Jose:$HF_TOKEN@huggingface.co/spaces/Lee-Jose/Search_Engine_LLM main
+        run: |
+          git config --global user.name "Lee-Jose"
+          git config --global user.email "lee.jose@example.com"
+          
+          # Add the Hugging Face space as a remote repository
+          git remote add hf https://Lee-Jose:$HF_TOKEN@huggingface.co/spaces/Lee-Jose/Search_Engine_LLM
+          
+          # Pull existing remote files first, allowing unrelated histories if needed
+          git pull hf main --allow-unrelated-histories --no-rebase || true
+          
+          # Push your local main branch to the Hugging Face space
+          git push hf main:main

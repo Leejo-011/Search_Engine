@@ -20,7 +20,7 @@ openai
 langchain-groq
 duckduckgo_search
 pymupdf
-arxiv
+arxiv<4.0.0
 wikipedia
 mysql-connector-python
 SQLAlchemy

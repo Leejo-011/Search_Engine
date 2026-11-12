@@ -22,8 +22,8 @@ jobs:
           # Add the Hugging Face space as a remote repository
           git remote add hf https://Lee-Jose:$HF_TOKEN@huggingface.co/spaces/Lee-Jose/Search_Engine_LLM
           
-          # Pull existing remote files first, allowing unrelated histories if needed
-          git pull hf main --allow-unrelated-histories --no-rebase || true
+          # Pull remote files and automatically resolve conflicts by keeping GitHub's version (-X ours)
+          git pull hf main --allow-unrelated-histories -X ours --no-rebase
           
           # Push your local main branch to the Hugging Face space
           git push hf main:main

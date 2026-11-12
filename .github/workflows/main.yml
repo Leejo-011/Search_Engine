@@ -17,7 +17,7 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           git config --global user.name "Lee-Jose"
-          git config --global user.email "lee.jose@example.com"
+          git config --global user.email "lee11jose@gmail.com"
           
           # Add the Hugging Face space as a remote repository
           git remote add hf https://Lee-Jose:$HF_TOKEN@huggingface.co/spaces/Lee-Jose/Search_Engine_LLM
